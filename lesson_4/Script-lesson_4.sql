@@ -184,30 +184,3 @@ join tickets on tickets.schedule_id = schedule.id
 where schedule.start_time between '2023-01-01' and '2023-01-02'
 group by films."name" ;
 
---Какую общую сумму заработал кинотеатр за выбранный период
-SELECT SUM(schedule.price) AS "Сумма заработка"
-FROM schedule
-JOIN tickets ON tickets.schedule_id  = schedule.id
-WHERE schedule.start_time  BETWEEN '2023-01-01' AND '2023-01-02';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
